@@ -16,7 +16,7 @@ pip install -r requirements.txt
 
 ## Job Posting URL to CSV
 
-
+This is a simple programme for creating gsheets files with custom job applications information in them, so you can more easily customise them.
 
 ### How to Use
 
