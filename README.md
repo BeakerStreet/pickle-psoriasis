@@ -22,7 +22,6 @@ This is a simple programme for creating gsheets files with custom job applicatio
 
 1. Create and activate a virtual environment:
 
-```bash
 # Create the virtual environment
 python3 -m venv venv
 
@@ -34,5 +33,5 @@ pip install -r requirements.txt
 
 # To deactivate when you're done
 # deactivate
-```
+
 
