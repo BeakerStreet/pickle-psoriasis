@@ -1,3 +1,5 @@
+import gspread
+from google.oauth2.service_account import Credentialss
 import os
 from pathlib import Path
 
