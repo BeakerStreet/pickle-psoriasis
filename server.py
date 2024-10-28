@@ -1,12 +1,20 @@
 import gspread
 from google.oauth2.service_account import Credentials
+import os
+from pathlib import Path
 
 def save_job_posting_url_to_gsheet(url, spreadsheet_id, sheet_name):
     # Define the scope
     scope = ["https://www.googleapis.com/auth/spreadsheets"]
 
-    # Add your service account file path
-    creds = Credentials.from_service_account_file('path/to/your/service_account.json', scopes=scope)
+    # Look for credentials file in a more reliable way
+    creds_path = Path(__file__).parent / 'credentials' / 'service_account.json'
+    
+    if not creds_path.exists():
+        raise FileNotFoundError(f"Please place your Google service account credentials at: {creds_path}")
+
+    # Authorize using the credentials file
+    creds = Credentials.from_service_account_file(str(creds_path), scopes=scope)
 
     # Authorize the client
     client = gspread.authorize(creds)
