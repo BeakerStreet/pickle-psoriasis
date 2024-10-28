@@ -18,6 +18,21 @@ pip install -r requirements.txt
 
 This is a simple programme for creating gsheets files with custom job applications information in them, so you can more easily customise them.
 
-### How to Use
+## Setup
 
+1. Create and activate a virtual environment:
+
+```bash
+# Create the virtual environment
+python3 -m venv venv
+
+# Activate the virtual environment
+source venv/bin/activate
+
+# Install requirements
+pip install -r requirements.txt
+
+# To deactivate when you're done
+# deactivate
+```
 
