@@ -1,6 +1,6 @@
 import csv
 
-def save_job_posting_url(url, filename='/csv/job_postings.csv'):
+def save_job_posting_url(url, filename='csv/job_postings.csv'):
     # Open the CSV file in append mode
     with open(filename, mode='a', newline='') as file:
         writer = csv.writer(file)
